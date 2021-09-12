@@ -60,6 +60,27 @@ jobs:
           compose-file: ./docker-compose.yml
           # additional options to pass to `docker-compose down` command
           down-flags: none
+      - name: Run Docker Compose File to build project
+        run: |
+         ls -la
+         docker-compose up --build --detach
+         
+      - name: Test the frontend
+        run: |
+         ls -la
+         cd warehouse && yarn install && yarn test
+ 
+      - name: Test the Backend
+      - run: |
+         cd warehouse
+        env:
+         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - run: |
+         ls -la
+         go get -u github.com/onsi/ginkgo/ginkgo
+         ginkgo -r -keepGoing .
+         
+      
           
       
          
