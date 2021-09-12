@@ -35,7 +35,7 @@ jobs:
           
       - name: Run Go and ginkgo Command
         run: |
-         go get -u github.com/onsi/ginkgo/ginkgo && ginkgo -r -keepGoing .
+         go install github.com/onsi/ginkgo/ginkgo && ginkgo -r -keepGoing .
    
    
   test-frontend:
@@ -61,8 +61,8 @@ jobs:
          ls -la
          cd warehouse && yarn install && yarn test
                           
-  build:
-    name: build
+  build-and-deploy:
+    name: build-and-deploy
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
