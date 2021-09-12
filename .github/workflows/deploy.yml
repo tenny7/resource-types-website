@@ -32,12 +32,9 @@ jobs:
        # uses: DerYeger/yarn-setup-action@f55be5383ea94f5eb25b20aee609af4603a68dde
        uses: DerYeger/yarn-setup-action@v1.0.1
 
-     - name: Change Directory into Warehouse
-       run: |
-         cd warehouse
-         ls -la
-
      - name: Run Go and ginkgo Command
+       env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
        run: |
         git submodule update --init
         cd warehouse && ls -la
