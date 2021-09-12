@@ -1,3 +1,0 @@
-[submodule "warehouse/resource-types"]
-	path = warehouse/resource-types
-	url = https://github.com/concourse/resource-types.git
