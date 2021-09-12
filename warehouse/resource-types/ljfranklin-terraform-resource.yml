@@ -1,5 +1,0 @@
-name: terraform
-repo: https://github.com/ljfranklin/terraform-resource
-container_image: ljfranklin/terraform-resource
-description: |
-    manages infrastructure via Terraform

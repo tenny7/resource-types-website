@@ -1,5 +1,0 @@
-name: time
-repo: https://github.com/concourse/time-resource
-container_image: concourse/time-resource
-description: |
-  a resource for triggering on an interval
