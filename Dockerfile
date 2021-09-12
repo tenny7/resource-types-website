@@ -17,8 +17,10 @@ RUN yarn install && yarn build
 
 WORKDIR /src/warehouse
 ENV CGO_ENABLED 0
-RUN go get -u all -d ./...
-# RUN go get -d ./...
+
+RUN git submodule update --init
+
+RUN go get -d ./...
 RUN go build -o dutyfree ./main.go
 
 FROM ubuntu:bionic AS dutyfree
