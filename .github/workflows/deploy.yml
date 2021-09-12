@@ -78,14 +78,7 @@ jobs:
         run: |
          ls -la
          cd warehouse && yarn install && yarn test
-         
-      - name: Test the Backend
-      - run: |
-         cd warehouse
-         ls -la
-         go get -u github.com/onsi/ginkgo/ginkgo
-         ginkgo -r -keepGoing .
-   
+        
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
