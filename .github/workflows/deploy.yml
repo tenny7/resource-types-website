@@ -59,6 +59,7 @@ jobs:
       - name: Check Directory path
         run: |
          ls -la
+         ls -la
          
       - name: Docker Compose Action
         # You may pin to the exact commit or the version.
