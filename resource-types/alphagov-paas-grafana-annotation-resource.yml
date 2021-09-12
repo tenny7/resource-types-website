@@ -1,5 +1,0 @@
-name: grafana-annotation
-repo: https://github.com/alphagov/paas-grafana-annotation-resource
-container_image: gdsre/grafana-annotation-resource
-description: |
-  Creates or updates a Grafana annotation
