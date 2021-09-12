@@ -7,6 +7,7 @@ jobs:
   test-backend:
    env:
      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+     TOKEN: ${{ secrets.TOKEN }}
    name: test-backend
    runs-on: ubuntu-latest
    steps:
