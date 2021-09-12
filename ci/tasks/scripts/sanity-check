@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+pushd dutyfree/warehouse
+  go mod download
+
+  cd sanity-check && go run ./main.go
+
+popd

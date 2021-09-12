@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  dutyfree:
+    build: .
+    image: concourse/dutyfree:local
+    environment:
+      - GH_TOKEN
+      - GH_URL
+    ports:
+      - 9090:9090

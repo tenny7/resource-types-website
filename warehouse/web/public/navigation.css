@@ -1,0 +1,73 @@
+.page-top {
+  background: #4a90e2;
+  align-self: stretch;
+}
+.page-top .top-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.top-logo, .top-nav {
+  background: #4a90e2;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  line-height: 70px;
+}
+.top-nav {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+}
+.top-link {
+  color: white;
+  font-size: 16px;
+  text-transform: lowercase;
+  line-height: 70px;
+  display: inline-block;
+  padding: 0 25px;
+}
+.top-link.logo-link {
+  box-sizing: border-box;
+  color: white;
+  margin: 0;
+  font-size: 22px;
+  width: 240px;
+  padding: 0 50px 0 70px;
+  line-height: 70px;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  position: relative;
+  text-transform: initial;
+}
+.top-link.logo-link img {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  position: absolute;
+  top: 15.5px;
+  left: 14.5px;
+}
+.top-link,
+.top-link:visited {
+  color: white;
+  text-decoration: none;
+}
+.top-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+.top-link.active {
+  background: #2d76cc;
+  text-decoration: underline;
+}
+@media (max-width: 1200px) {
+  .navigation {
+    grid-template-columns: 5fr 2fr;
+    grid-template-areas: "logo search" "primary-nav primary-nav";
+  }
+  .top-nav a {
+    line-height: 60px;
+    vertical-align: top;
+  }
+}

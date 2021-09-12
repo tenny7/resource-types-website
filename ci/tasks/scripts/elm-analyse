@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+pushd dutyfree/warehouse/web
+  yarn install
+  yarn analyse
+popd

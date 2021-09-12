@@ -1,0 +1,15 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source: {repository: concourse/unit}
+
+inputs:
+  - name: dutyfree
+
+outputs:
+  - name: dutyfree
+
+run:
+  path: dutyfree/ci/tasks/scripts/update-resource-types
