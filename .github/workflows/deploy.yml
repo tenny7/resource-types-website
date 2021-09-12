@@ -35,7 +35,7 @@ jobs:
           
       - name: Run Go and ginkgo Command
         run: |
-         go install github.com/onsi/ginkgo/ginkgo && ginkgo -r -keepGoing .
+         go install github.com/onsi/ginkgo/ginkgo@latest && ginkgo -r -keepGoing .
    
    
   test-frontend:
