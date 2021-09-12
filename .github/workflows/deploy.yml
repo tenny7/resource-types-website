@@ -32,11 +32,14 @@ jobs:
         # uses: DerYeger/yarn-setup-action@f55be5383ea94f5eb25b20aee609af4603a68dde
         uses: DerYeger/yarn-setup-action@v1.0.1
         
-      - name: Run Yarn Install and Build
+      - name: Test Backend
         env:
          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
+         cd warehouse
          ls -la
+         go get -u github.com/onsi/ginkgo/ginkgo
+         ginkgo -r -keepGoing .
          
       - name: setup-docker
         # You may pin to the exact commit or the version.
